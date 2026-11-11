@@ -84,6 +84,7 @@ app.get('/product/:id', (req, res) => {
     const head = { title: 'Product not found' };
     return res.status(404).render('404', { head });
   }
+  
 
  // const state = { shop: true };
  const state = {}
@@ -134,3 +135,5 @@ app.listen(PORT, (error) => {
 
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+

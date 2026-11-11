@@ -1,0 +1,14 @@
+<main>
+
+
+  <article>
+    <img src="{{product.image}}" alt="{{product.alt}}" width="400">
+    <h1>{{this.name}}</h1>
+    <p>Category: {{this.category}}</p>
+    <p>{{this.description}}</p>
+    <p>Price: {{euro product.price}} </p>
+    <p> New {{product.price}}</p>
+    <button type="button" data-add-to-cart="{{product.id}}">Add to cart</button>
+    <p data-cart-message aria-live="polite"></p>
+  </article>
+</main>

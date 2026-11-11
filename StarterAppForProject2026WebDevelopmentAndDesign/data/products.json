@@ -5,7 +5,7 @@
     "category": "Coffee",
     "description": "Smooth medium roast with notes of chocolate and caramel. 250g whole beans.",
     "price": 12.5,
-    "image": "/images/products/product-1.svg",
+    "image": "/images/products/place-holder.png",
     "alt": "Placeholder image for Morning Blend Coffee"
   },
   {
@@ -54,7 +54,7 @@
     "alt": "Placeholder image for Glass Cafetière"
   },
   {
-    "id": "7",
+    "id": "2",
     "name": "Hand Coffee Grinder",
     "category": "Brewing",
     "description": "Adjustable ceramic burrs for anything from espresso to cold brew.",
@@ -67,7 +67,7 @@
     "name": "Gooseneck Kettle",
     "category": "Brewing",
     "description": "1 litre stovetop kettle with a slim spout for precise pouring.",
-    "price": 34.5,
+    "price": 30,
     "image": "/images/products/product-8.svg",
     "alt": "Placeholder image for Gooseneck Kettle"
   },
@@ -79,6 +79,16 @@
     "price": 18.5,
     "image": "/images/products/product-9.svg",
     "alt": "Placeholder image for Travel Mug"
+  },
+   {
+    "id": "10",
+    "name": "mug",
+    "category": "Accessories",
+    "description": "Basic white mug.",
+    "price": 18.5,
+    "image": "/images/products/mug_basci",
+    "alt": "Placeholder image for Travel Mug"
   }
+
 
 ]
