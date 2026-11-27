@@ -1,11 +1,25 @@
 
 <nav>
-     <ul>
-          <li ><a  class='{{#if state.home}}active{{/if}}' href='/'>Home</a></li>     
-          <li><a class='{{#if state.shop}}active{{/if}}' href='/shop'>Shop</a></li>
-          <li><a class='{{#if state.contact}}active{{/if}}' href='/contact'>Contact</a></li>
-          {{!-- cart.js puts the number of items into data-cart-count --}}
-          <li><a class='{{#if state.cart}}active{{/if}}' href='/cart'>Cart (<span data-cart-count>0</span>)</a></li>
-
-     </ul>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+    <a class="nav-item nav-link {{#if isHome}}active{{/if}}" id="nav-home-tab" data-toggle="tab" href="http://localhost:3000" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+    <a class="nav-item nav-link {{#if isShop}}active{{/if}}" id="nav-shop-tab" data-toggle="tab" href="/shop" role="tab" aria-controls="nav-profile" aria-selected="false">Shop</a>
+    <a class="nav-item nav-link {{#if isContact}}active{{/if}}" id="nav-contact-tab" data-toggle="tab" href="/contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+    <a class="nav-item nav-link {{#if isCart}}active{{/if}}" id="nav-cart-tab" data-toggle="tab" href="/cart" role="tab" aria-controls="nav-contact" aria-selected="false">Cart (<span data-cart-count>0</span>)</a>
+  </div>
 </nav>
+<div class="tab-content" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
+  <div class="tab-pane fade" id="nav-shop" role="tabpanel" aria-labelledby="nav-shop-tab">...</div>
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+  <div class="tab-pane fade" id="nav-cart" role="tabpanel" aria-labelledby="nav-cart-tab">...</div>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.nav-link').forEach(link => {
+      const path = new URL(link.href, location.origin).pathname;
+      if (path === location.pathname) link.classList.add('active');
+    });
+  });
+</script>
